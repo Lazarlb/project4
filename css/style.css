@@ -2,7 +2,6 @@
 html,body{
     margin: 0px;
     padding:0px;
-    font-family: 'Lobster';
     scroll-behavior: smooth;
 }
 a{
@@ -10,6 +9,9 @@ a{
 }
 ul{
     list-style-type: none;
+}
+h1,h2,h3,h4,h5,h5{
+    font-family: 'Lobster';
 }
 /**header**/
 .header{
@@ -19,9 +21,13 @@ ul{
     text-align: center;
     justify-content: center;
     color: white;
+    font-family: 'Lobster';
+    margin: 0;
 }
 .header div{
-    padding: 5px;
+    padding: 0px;
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
 .header .a-tags{
     display: flex;
@@ -35,6 +41,13 @@ color: white;
 /**../header**/
 /**slider**/
 /* Slideshow container */
+.slider-one{
+    width: 100%;
+    height: 80vh;
+}
+.slider-one img{
+    height: 100%;
+}
 .slideshow-container {
     max-width: 100%;
     position: relative;
@@ -134,11 +147,17 @@ color: white;
     padding: 10px;
     
 }
-.container div button{
+.container div span{
     background-color: #f5deb300;
     border-bottom: 1px solid rgb(42, 29, 13);
     border-top: 1px solid rgb(42, 29, 13);
     cursor: pointer;
+    transition: 1s;
+}
+.container div span:hover{
+    transition: 1s;
+    background-color: rgb(42, 29, 13);
+    color: white;
 }
 .container div h2,.container div h5{
     color: rgb(42, 29, 13);
@@ -158,7 +177,9 @@ color: white;
 .container-2 div{
     text-align: center;
     justify-content: center;
-    padding: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin: 0px;
 }
 
 .container-2 .tab-content .active{
@@ -166,7 +187,7 @@ color: white;
     background-color:  rgb(42, 29, 13);
 }
 .container-2 .img img{
-    width: inherit;
+    width: 100%;
     height: 222px;
 }
 /**../third section**/
@@ -174,7 +195,6 @@ color: white;
 .fourth-section h2{
     border-bottom: 1px solid rgb(42, 29, 13);
 }
-.fourth-section
 .fourth-section .row div{
     padding: 0px;
 }
@@ -242,27 +262,39 @@ margin-top: 32%;
     width: 100%;
 }
 .fifth-section .row{
+    height: 33%;
+}
+.fifth-section .items{
     display:flex;
     justify-content: center;
     text-align: center;
     height: inherit;
-    padding-top: 30vh;
     width: 100%;
     margin: 0px;
 }
-.fifth-section div span{
+.fifth-section .items span{
     display: grid;
     color: white;
+    font-size: 30px;
 }
-.fifth-section div span i{
+.fifth-section .items span i{
     display: grid;
     color: white;
+    background: linear-gradient(black,gray,gray,black);
+}
+.fifth-section .items h3{
+    background: linear-gradient(black,gray,gray,black);
 }
 /**../fifth section**/
 /**Last slider**/
 .last-slider{
     height: fit-content;
 }
+.last-slider .container div{
+    padding: 0px;
+    font-size: 20px;
+}
+
 .last-slider h2{
     text-align: center;
     justify-content: center;
@@ -277,6 +309,9 @@ margin-top: 32%;
 .last-slider .active{
     background-color: white;
     width: inherit;
+    font-size: inherit;
+    padding: 0px;
+    margin: 0px;
 }
 .last-slider .slider-2{
     border-left: 5px solid rgb(42, 29, 13);
@@ -285,20 +320,13 @@ margin-top: 32%;
 .slider-2 div{
     color: black;
 }
-.last-slider .slider-2 img{
+.last-slider .slider-2 .img_holder img{
     height: 200px;
     text-align: center;
-    margin-left: 32%;
+    width: 50%;
 }
-.last-slider .slider-2,.last-slider .slider-2 .active{
-   background:linear-gradient(white,rgb(42, 29, 13)) rgb(42, 29, 13);
-}
-.last-slider .slider-dots .active{
-    width: 30px;
-    border-top: none;
-    border-bottom: none;
-    margin-top: 10px;
-
+.carousel-inner>.item.active, .carousel-inner>.item.next.left, .carousel-inner>.item.prev.right {
+    transform: none;
 }
 /**../last slider**/
 /**footer**/
@@ -316,18 +344,27 @@ footer .footer-border .row{
 }
 footer div h4,footer div h5{
     text-align: center;
+    padding: 10px;
 }
 footer ul{
     padding: 0px;
+    margin: 15px;
 }
 footer div li{
     display: flex;
+}
+footer ul span{
+    padding-right: 6px;
 }
 footer .folow-us .row{
     height: 7%;
 }
 .folow-us .span{
     text-align: center;
+    font-size: 30px;
+}
+.location{
+    overflow: hidden;
 }
 .location div{
     text-align: center;
@@ -335,6 +372,10 @@ footer .folow-us .row{
 }
 .location div iframe{
     text-align: center;
+    height: 265px;
+}
+.location .row{
+    height: 265px;
 }
 /**../footer**/
 /**media query**/
@@ -342,17 +383,27 @@ footer .folow-us .row{
     .header .a-tags{
         display: inline;
     }
-
+    .slider-one{
+        width: 100%;
+        height: 58vh;
+    }
+    .slider-one img{
+        height: 100%;
+    }
 }
 @media screen and (max-width: 767px) and (min-width: 549px) {
     .header .a-tags{
         display: inline;
     }
+    .slider-one{
+        width: 100%;
+        height: 58vh;
+    }
+    .slider-one img{
+        height: 100%;
+    }
     .fourth-section .imgs h3 {
         margin-top: 22%;
-    }
-    .last-slider .slider-2 img{
-        margin-left: 10px;
     }
     footer{
         display: inherit;
@@ -362,20 +413,21 @@ footer .folow-us .row{
         border-bottom: 1px solid white;
         border-left:none;
         border-right:none;
-    }
-    .last-slider .slider-2 img{
-        margin-left: 26%;
     }
 }
 @media screen and (max-width: 548px){
     .header .a-tags{
         display: inline;
     }
+    .slider-one{
+        width: 100%;
+        height: 58vh;
+    }
+    .slider-one img{
+        height: 100%;
+    }
     .fourth-section .imgs h3 {
         margin-top: 22%;
-    }
-    .last-slider .slider-2 img{
-        margin-left: 10px;
     }
     footer{
         display: inherit;
@@ -385,8 +437,5 @@ footer .folow-us .row{
         border-bottom: 1px solid white;
         border-left:none;
         border-right:none;
-    }
-    .last-slider .slider-2 img{
-        margin-left: 15%;
     }
 }
