@@ -147,7 +147,7 @@ color: white;
     padding: 10px;
     
 }
-.container div span{
+.container div .read-more{
     background-color: #f5deb300;
     border-bottom: 1px solid rgb(42, 29, 13);
     border-top: 1px solid rgb(42, 29, 13);
@@ -202,7 +202,7 @@ color: white;
 display: flex;
 text-align: center;
 justify-content: center;
-margin-top: 32%;
+margin-top: 40%;
 }
 .fourth-section .imgs{
     position: relative;
@@ -280,15 +280,16 @@ margin-top: 32%;
 .fifth-section .items span i{
     display: grid;
     color: white;
-    background: linear-gradient(black,gray,gray,black);
+    background: linear-gradient(#00000075,#80808096,#808080a8,#00000082);
 }
 .fifth-section .items h3{
-    background: linear-gradient(black,gray,gray,black);
+    background: linear-gradient(#00000075,#80808096,#808080a8,#00000082);
 }
 /**../fifth section**/
 /**Last slider**/
 .last-slider{
     height: fit-content;
+    margin: 10px;
 }
 .last-slider .container div{
     padding: 0px;
@@ -303,15 +304,19 @@ margin-top: 32%;
 }
 .last-slider img{
     border: 1px solid white;
-    border-radius: 50%;
-    overflow: hidden;
+    border-radius: 3%;
 }
 .last-slider .active{
     background-color: white;
     width: inherit;
     font-size: inherit;
-    padding: 0px;
-    margin: 0px;
+    translate:(0,0);
+    padding: 0px !important;
+   transition: 0.7s !important;
+    margin-top: -22px !important;
+}
+.div.item.next.right{
+    margin: 0 !important;
 }
 .last-slider .slider-2{
     border-left: 5px solid rgb(42, 29, 13);
@@ -325,9 +330,10 @@ margin-top: 32%;
     text-align: center;
     width: 50%;
 }
-.carousel-inner>.item.active, .carousel-inner>.item.next.left, .carousel-inner>.item.prev.right {
-    transform: none;
+.container div span{
+    border: none;
 }
+
 /**../last slider**/
 /**footer**/
 footer{
@@ -342,7 +348,7 @@ footer .footer-border {
 footer .footer-border .row{
     height: 7%;
 }
-footer div h4,footer div h5{
+footer div h2,footer div h3{
     text-align: center;
     padding: 10px;
 }
@@ -403,7 +409,7 @@ footer .folow-us .row{
         height: 100%;
     }
     .fourth-section .imgs h3 {
-        margin-top: 22%;
+        margin-top: 60%;
     }
     footer{
         display: inherit;
