@@ -345,9 +345,7 @@ footer .footer-border {
     border-right: 1px solid white;
     border-left: 1px solid white;
 }
-footer .footer-border .row{
-    height: 7%;
-}
+
 footer div h2,footer div h3{
     text-align: center;
     padding: 10px;
@@ -362,9 +360,7 @@ footer div li{
 footer ul span{
     padding-right: 6px;
 }
-footer .folow-us .row{
-    height: 7%;
-}
+
 .folow-us .span{
     text-align: center;
     font-size: 30px;
@@ -396,6 +392,7 @@ footer .folow-us .row{
     .slider-one img{
         height: 100%;
     }
+  
 }
 @media screen and (max-width: 767px) and (min-width: 549px) {
     .header .a-tags{
@@ -420,9 +417,13 @@ footer .folow-us .row{
         border-left:none;
         border-right:none;
     }
+    footer .folow-us .row,
+    footer .footer-border .row {
+        height: 7%;
+    }
 }
-@media screen and (max-width: 548px){
-    .header .a-tags{
+@media screen and (max-width: 548px) {
+    .header .a-tags {
         display: inline;
     }
     .slider-one{
@@ -438,10 +439,14 @@ footer .folow-us .row{
     footer{
         display: inherit;
     }
-    footer .footer-border{
+    footer .footer-border {
         border-top: 1px solid white;
         border-bottom: 1px solid white;
         border-left:none;
         border-right:none;
+    }
+    footer .folow-us .row,
+    footer .footer-border .row {
+        height: 7%;
     }
 }
